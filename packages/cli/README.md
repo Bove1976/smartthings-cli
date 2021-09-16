@@ -200,6 +200,8 @@ that maps to that hierarchy.
 * [`smartthings locations:rooms:update [ID]`](#smartthings-locationsroomsupdate-id)
 * [`smartthings locations:update [ID]`](#smartthings-locationsupdate-id)
 * [`smartthings logout`](#smartthings-logout)
+* [`smartthings organizations [ID]`](#smartthings-organizations-id)
+* [`smartthings organizations:current`](#smartthings-organizationscurrent)
 * [`smartthings plugins`](#smartthings-plugins)
 * [`smartthings plugins:inspect PLUGIN...`](#smartthings-pluginsinspect-plugin)
 * [`smartthings plugins:install PLUGIN...`](#smartthings-pluginsinstall-plugin)
@@ -255,7 +257,7 @@ OPTIONS
   --type=type                      filter results by appType, WEBHOOK_SMART_APP, LAMBDA_SMART_APP, API_ONLY
 ```
 
-_See code: [src/commands/apps.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps.ts)_
+_See code: [src/commands/apps.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps.ts)_
 
 ## `smartthings apps:authorize ARN`
 
@@ -286,7 +288,7 @@ EXAMPLES
   It requires your machine to be configured to run the AWS CLI
 ```
 
-_See code: [src/commands/apps/authorize.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/authorize.ts)_
+_See code: [src/commands/apps/authorize.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/authorize.ts)_
 
 ## `smartthings apps:create`
 
@@ -314,7 +316,7 @@ OPTIONS
   --statement-id=statement-id  use this statement id instead of the default when authorizing lambda functions
 ```
 
-_See code: [src/commands/apps/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/create.ts)_
+_See code: [src/commands/apps/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/create.ts)_
 
 ## `smartthings apps:delete [ID]`
 
@@ -334,7 +336,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/delete.ts)_
+_See code: [src/commands/apps/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/delete.ts)_
 
 ## `smartthings apps:oauth [ID]`
 
@@ -360,7 +362,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/oauth.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/oauth.ts)_
+_See code: [src/commands/apps/oauth.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/oauth.ts)_
 
 ## `smartthings apps:oauth:generate [ID]`
 
@@ -388,7 +390,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/oauth/generate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/oauth/generate.ts)_
+_See code: [src/commands/apps/oauth/generate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/oauth/generate.ts)_
 
 ## `smartthings apps:oauth:update [ID]`
 
@@ -416,7 +418,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/oauth/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/oauth/update.ts)_
+_See code: [src/commands/apps/oauth/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/oauth/update.ts)_
 
 ## `smartthings apps:register [ID]`
 
@@ -436,7 +438,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/register.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/register.ts)_
+_See code: [src/commands/apps/register.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/register.ts)_
 
 ## `smartthings apps:settings [ID]`
 
@@ -462,7 +464,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/settings.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/settings.ts)_
+_See code: [src/commands/apps/settings.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/settings.ts)_
 
 ## `smartthings apps:settings:update [ID]`
 
@@ -490,7 +492,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/apps/settings/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/settings/update.ts)_
+_See code: [src/commands/apps/settings/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/settings/update.ts)_
 
 ## `smartthings apps:update [ID]`
 
@@ -521,7 +523,7 @@ OPTIONS
   --statement-id=statement-id  use this statement id instead of the default when authorizing lambda functions
 ```
 
-_See code: [src/commands/apps/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/apps/update.ts)_
+_See code: [src/commands/apps/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/apps/update.ts)_
 
 ## `smartthings autocomplete [SHELL]`
 
@@ -544,7 +546,7 @@ EXAMPLES
   $ smartthings autocomplete --refresh-cache
 ```
 
-_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.1/src/commands/autocomplete/index.ts)_
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.3.0/src/commands/autocomplete/index.ts)_
 
 ## `smartthings capabilities [ID] [VERSION]`
 
@@ -559,21 +561,23 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -h, --help                 show CLI help
-  -j, --json                 use JSON format of input and/or output
-  -n, --namespace=namespace  a specific namespace to query; will use all by default
-  -o, --output=output        specify output file
-  -p, --profile=profile      [default: default] configuration profile
-  -s, --standard             show standard SmartThings capabilities
-  -t, --token=token          the auth token to use
-  -y, --yaml                 use YAML format of input and/or output
-  --compact                  use compact table format with no lines between body rows
-  --expanded                 use expanded table format with a line between each body row
-  --indent=indent            specify indentation for formatting JSON or YAML output
-  --language=language        ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -A, --all-organizations          include entities from all organizations the user belongs to
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -n, --namespace=namespace        a specific namespace to query; will use all by default
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -s, --standard                   show standard SmartThings capabilities
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities.ts)_
+_See code: [src/commands/capabilities.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities.ts)_
 
 ## `smartthings capabilities:create`
 
@@ -584,22 +588,23 @@ USAGE
   $ smartthings capabilities:create
 
 OPTIONS
-  -d, --dry-run              produce JSON but don't actually submit
-  -h, --help                 show CLI help
-  -i, --input=input          specify input file
-  -j, --json                 use JSON format of input and/or output
-  -n, --namespace=namespace  the namespace to create the capability under
-  -o, --output=output        specify output file
-  -p, --profile=profile      [default: default] configuration profile
-  -t, --token=token          the auth token to use
-  -y, --yaml                 use YAML format of input and/or output
-  --compact                  use compact table format with no lines between body rows
-  --expanded                 use expanded table format with a line between each body row
-  --indent=indent            specify indentation for formatting JSON or YAML output
-  --language=language        ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -n, --namespace=namespace        the namespace to create the capability under
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/create.ts)_
+_See code: [src/commands/capabilities/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/create.ts)_
 
 ## `smartthings capabilities:delete [ID] [VERSION]`
 
@@ -614,13 +619,14 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -h, --help             show CLI help
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/delete.ts)_
+_See code: [src/commands/capabilities/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/delete.ts)_
 
 ## `smartthings capabilities:namespaces`
 
@@ -631,19 +637,20 @@ USAGE
   $ smartthings capabilities:namespaces
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/namespaces.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/namespaces.ts)_
+_See code: [src/commands/capabilities/namespaces.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/namespaces.ts)_
 
 ## `smartthings capabilities:presentation [ID] [VERSION]`
 
@@ -658,20 +665,21 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -h, --help                 show CLI help
-  -j, --json                 use JSON format of input and/or output
-  -n, --namespace=namespace  a specific namespace to query; will use all by default
-  -o, --output=output        specify output file
-  -p, --profile=profile      [default: default] configuration profile
-  -t, --token=token          the auth token to use
-  -y, --yaml                 use YAML format of input and/or output
-  --compact                  use compact table format with no lines between body rows
-  --expanded                 use expanded table format with a line between each body row
-  --indent=indent            specify indentation for formatting JSON or YAML output
-  --language=language        ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -n, --namespace=namespace        a specific namespace to query; will use all by default
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/presentation.ts)_
+_See code: [src/commands/capabilities/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/presentation.ts)_
 
 ## `smartthings capabilities:presentation:create [ID] [VERSION]`
 
@@ -686,21 +694,22 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/presentation/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/presentation/create.ts)_
+_See code: [src/commands/capabilities/presentation/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/presentation/create.ts)_
 
 ## `smartthings capabilities:presentation:update [ID] [VERSION]`
 
@@ -715,21 +724,22 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/presentation/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/presentation/update.ts)_
+_See code: [src/commands/capabilities/presentation/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/presentation/update.ts)_
 
 ## `smartthings capabilities:translations [ID] [VERSION] [TAG]`
 
@@ -745,18 +755,19 @@ ARGUMENTS
   TAG      the locale tag
 
 OPTIONS
-  -h, --help                 show CLI help
-  -j, --json                 use JSON format of input and/or output
-  -n, --namespace=namespace  a specific namespace to query; will use all by default
-  -o, --output=output        specify output file
-  -p, --profile=profile      [default: default] configuration profile
-  -t, --token=token          the auth token to use
-  -v, --verbose              include list of supported locales in table output
-  -y, --yaml                 use YAML format of input and/or output
-  --compact                  use compact table format with no lines between body rows
-  --expanded                 use expanded table format with a line between each body row
-  --indent=indent            specify indentation for formatting JSON or YAML output
-  --language=language        ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -n, --namespace=namespace        a specific namespace to query; will use all by default
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -v, --verbose                    include list of supported locales in table output
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 EXAMPLES
   $ smartthings capabilities:translations
@@ -809,15 +820,15 @@ EXAMPLES
   Attributes:
   ┌────────────────────────┬───────────────────┬────────────────────────────────┬───────────────────────────────────────
   ─────────────┐
-  │ Name                   │ Label             │ Description                    │ Template                               
+  │ Name                   │ Label             │ Description                    │ Template
               │
   ├────────────────────────┼───────────────────┼────────────────────────────────┼───────────────────────────────────────
   ─────────────┤
   │ outputModulation       │ Output Modulation │ Power supply output modulation │ The {{attribute}} of {{device.label}}
   is {{value}} │
-  │ outputModulation.50hz  │ 50 Hz             │                                │                                        
+  │ outputModulation.50hz  │ 50 Hz             │                                │
               │
-  │ outputModulation.60hz  │ 60 Hz             │                                │                                        
+  │ outputModulation.60hz  │ 60 Hz             │                                │
               │
   └────────────────────────┴───────────────────┴────────────────────────────────┴───────────────────────────────────────
   ─────────────┘
@@ -831,7 +842,7 @@ EXAMPLES
   └──────────────────────────────────────┴───────────────────────┴──────────────────────────────────────────────────┘
 ```
 
-_See code: [src/commands/capabilities/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/translations.ts)_
+_See code: [src/commands/capabilities/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/translations.ts)_
 
 ## `smartthings capabilities:translations:create [ID] [VERSION]`
 
@@ -846,18 +857,19 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 EXAMPLES
   $ smartthings capabilities:translations:create custom1.outputModulation 1 -i en.yaml
@@ -908,7 +920,7 @@ EXAMPLES
            label: Output Modulation
 ```
 
-_See code: [src/commands/capabilities/translations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/translations/create.ts)_
+_See code: [src/commands/capabilities/translations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/translations/create.ts)_
 
 ## `smartthings capabilities:translations:update [ID] [VERSION]`
 
@@ -923,18 +935,19 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 EXAMPLES
   $ smartthings capabilities:translations:update custom1.outputModulation 1 -i en.yaml
@@ -985,7 +998,7 @@ EXAMPLES
            label: Output Modulation
 ```
 
-_See code: [src/commands/capabilities/translations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/translations/update.ts)_
+_See code: [src/commands/capabilities/translations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/translations/update.ts)_
 
 ## `smartthings capabilities:translations:upsert [ID] [VERSION]`
 
@@ -1000,18 +1013,19 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 EXAMPLES
   $ smartthings capabilities:translations:upsert custom1.outputModulation 1 -i en.yaml
@@ -1062,7 +1076,7 @@ EXAMPLES
            label: Output Modulation
 ```
 
-_See code: [src/commands/capabilities/translations/upsert.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/translations/upsert.ts)_
+_See code: [src/commands/capabilities/translations/upsert.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/translations/upsert.ts)_
 
 ## `smartthings capabilities:update [ID] [VERSION]`
 
@@ -1077,21 +1091,22 @@ ARGUMENTS
   VERSION  the capability version
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/capabilities/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/capabilities/update.ts)_
+_See code: [src/commands/capabilities/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/capabilities/update.ts)_
 
 ## `smartthings config [NAME]`
 
@@ -1116,7 +1131,7 @@ OPTIONS
   --indent=indent        specify indentation for formatting JSON or YAML output
 ```
 
-_See code: [src/commands/config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/config.ts)_
 
 ## `smartthings devicepreferences [IDORINDEX]`
 
@@ -1130,16 +1145,20 @@ ARGUMENTS
   IDORINDEX  device preference id or index
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -A, --all-organizations          include entities from all organizations the user belongs to
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -n, --namespace=namespace        a specific namespace to query; will use all by default
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -s, --standard                   show standard SmartThings capabilities
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-preferences
@@ -1152,7 +1171,7 @@ EXAMPLES
   $ smartthings devicepreferences 3 -o dp.json          # write details as JSON for third preference to dp.json
 ```
 
-_See code: [src/commands/devicepreferences.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devicepreferences.ts)_
+_See code: [src/commands/devicepreferences.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devicepreferences.ts)_
 
 ## `smartthings devicepreferences:create`
 
@@ -1163,18 +1182,19 @@ USAGE
   $ smartthings devicepreferences:create
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-preferences:create
@@ -1190,7 +1210,7 @@ EXAMPLES
   dp.json and write the results to dp-saved.json
 ```
 
-_See code: [src/commands/devicepreferences/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devicepreferences/create.ts)_
+_See code: [src/commands/devicepreferences/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devicepreferences/create.ts)_
 
 ## `smartthings devicepreferences:update [ID]`
 
@@ -1204,18 +1224,19 @@ ARGUMENTS
   ID  the device preference id
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-preferences:update
@@ -1227,7 +1248,7 @@ EXAMPLES
   data from dp.yaml
 ```
 
-_See code: [src/commands/devicepreferences/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devicepreferences/update.ts)_
+_See code: [src/commands/devicepreferences/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devicepreferences/update.ts)_
 
 ## `smartthings deviceprofiles [ID]`
 
@@ -1241,17 +1262,19 @@ ARGUMENTS
   ID  device profile to retrieve; UUID or the number of the profile from list
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -v, --verbose          include presentationId and manufacturerName in list output
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -A, --all-organizations          include entities from all organizations the user belongs to
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -v, --verbose                    include presentationId and manufacturerName in list output
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles
@@ -1265,7 +1288,7 @@ EXAMPLES
   $ smartthings deviceprofiles 4 -j -o profile.json # write the profile to the file "profile.json"
 ```
 
-_See code: [src/commands/deviceprofiles.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles.ts)_
+_See code: [src/commands/deviceprofiles.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles.ts)_
 
 ## `smartthings deviceprofiles:create`
 
@@ -1276,18 +1299,19 @@ USAGE
   $ smartthings deviceprofiles:create
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 DESCRIPTION
   Creates a new device profile. If a vid field is not present in the meta
@@ -1303,7 +1327,7 @@ EXAMPLES
   $ smartthings deviceprofiles:create                      # create a device profile with interactive dialog
 ```
 
-_See code: [src/commands/deviceprofiles/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/create.ts)_
+_See code: [src/commands/deviceprofiles/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/create.ts)_
 
 ## `smartthings deviceprofiles:delete [ID]`
 
@@ -1317,10 +1341,11 @@ ARGUMENTS
   ID  Device profile UUID or number in the list
 
 OPTIONS
-  -h, --help             show CLI help
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:delete
@@ -1330,7 +1355,7 @@ EXAMPLES
   $ smartthings deviceprofiles:delete 5                                     # delete the 5th profile in the list
 ```
 
-_See code: [src/commands/deviceprofiles/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/delete.ts)_
+_See code: [src/commands/deviceprofiles/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/delete.ts)_
 
 ## `smartthings deviceprofiles:device-config [ID]`
 
@@ -1344,22 +1369,23 @@ ARGUMENTS
   ID  device profile id or the number in list
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:device-config
 ```
 
-_See code: [src/commands/deviceprofiles/device-config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/device-config.ts)_
+_See code: [src/commands/deviceprofiles/device-config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/device-config.ts)_
 
 ## `smartthings deviceprofiles:presentation [ID]`
 
@@ -1373,16 +1399,17 @@ ARGUMENTS
   ID  device profile UUID or the number of the profile from list
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:presentation
@@ -1398,7 +1425,7 @@ EXAMPLES
   flag then no language header is specified in the API request
 ```
 
-_See code: [src/commands/deviceprofiles/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/presentation.ts)_
+_See code: [src/commands/deviceprofiles/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/presentation.ts)_
 
 ## `smartthings deviceprofiles:publish [ID]`
 
@@ -1412,22 +1439,23 @@ ARGUMENTS
   ID  device profile id
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:publish
 ```
 
-_See code: [src/commands/deviceprofiles/publish.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/publish.ts)_
+_See code: [src/commands/deviceprofiles/publish.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/publish.ts)_
 
 ## `smartthings deviceprofiles:translations [ID] [TAG]`
 
@@ -1442,17 +1470,18 @@ ARGUMENTS
   TAG  the locale tag or number of the tag from list
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -v, --verbose          include list of locales in table output
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -v, --verbose                    include list of locales in table output
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:translations
@@ -1510,7 +1539,7 @@ EXAMPLES
   └───────────┴────────────┴───────────────────────────────┘
 ```
 
-_See code: [src/commands/deviceprofiles/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/translations.ts)_
+_See code: [src/commands/deviceprofiles/translations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/translations.ts)_
 
 ## `smartthings deviceprofiles:translations:delete [ID] [TAG]`
 
@@ -1525,10 +1554,11 @@ ARGUMENTS
   TAG  the locale tag
 
 OPTIONS
-  -h, --help             show CLI help
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:translations:delete
@@ -1555,7 +1585,7 @@ EXAMPLES
   Device profile "3acbf2fc-6be2-4be0-aeb5-44759cbd66c2" translation "en" deleted
 ```
 
-_See code: [src/commands/deviceprofiles/translations/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/translations/delete.ts)_
+_See code: [src/commands/deviceprofiles/translations/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/translations/delete.ts)_
 
 ## `smartthings deviceprofiles:translations:upsert [ID]`
 
@@ -1569,18 +1599,19 @@ ARGUMENTS
   ID  UUID or the number of the profile from list
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:translations:upsert
@@ -1620,7 +1651,7 @@ EXAMPLES
        description: Switchable outlet 1 power
 ```
 
-_See code: [src/commands/deviceprofiles/translations/upsert.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/translations/upsert.ts)_
+_See code: [src/commands/deviceprofiles/translations/upsert.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/translations/upsert.ts)_
 
 ## `smartthings deviceprofiles:update [ID]`
 
@@ -1634,24 +1665,25 @@ ARGUMENTS
   ID  device profile UUID or number in the list
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:update
 ```
 
-_See code: [src/commands/deviceprofiles/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/update.ts)_
+_See code: [src/commands/deviceprofiles/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/update.ts)_
 
 ## `smartthings deviceprofiles:view [ID]`
 
@@ -1665,22 +1697,23 @@ ARGUMENTS
   ID  device profile UUID or the number from list
 
 OPTIONS
-  -h, --help             show CLI help
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 ALIASES
   $ smartthings device-profiles:view
 ```
 
-_See code: [src/commands/deviceprofiles/view.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/view.ts)_
+_See code: [src/commands/deviceprofiles/view.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/view.ts)_
 
 ## `smartthings deviceprofiles:view:create`
 
@@ -1691,18 +1724,19 @@ USAGE
   $ smartthings deviceprofiles:view:create
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 DESCRIPTION
   Creates a new device profile and device configuration. Unlike deviceprofiles:create,
@@ -1735,7 +1769,7 @@ EXAMPLES
          - capability: switch
 ```
 
-_See code: [src/commands/deviceprofiles/view/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/view/create.ts)_
+_See code: [src/commands/deviceprofiles/view/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/view/create.ts)_
 
 ## `smartthings deviceprofiles:view:update [ID]`
 
@@ -1749,18 +1783,19 @@ ARGUMENTS
   ID  device profile id
 
 OPTIONS
-  -d, --dry-run          produce JSON but don't actually submit
-  -h, --help             show CLI help
-  -i, --input=input      specify input file
-  -j, --json             use JSON format of input and/or output
-  -o, --output=output    specify output file
-  -p, --profile=profile  [default: default] configuration profile
-  -t, --token=token      the auth token to use
-  -y, --yaml             use YAML format of input and/or output
-  --compact              use compact table format with no lines between body rows
-  --expanded             use expanded table format with a line between each body row
-  --indent=indent        specify indentation for formatting JSON or YAML output
-  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+  -O, --organization=organization  The organization ID to use for this command
+  -d, --dry-run                    produce JSON but don't actually submit
+  -h, --help                       show CLI help
+  -i, --input=input                specify input file
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 
 DESCRIPTION
   Updates a device profile and device configuration and sets the vid of the profile
@@ -1796,7 +1831,7 @@ EXAMPLES
          - capability: switch
 ```
 
-_See code: [src/commands/deviceprofiles/view/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/deviceprofiles/view/update.ts)_
+_See code: [src/commands/deviceprofiles/view/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/deviceprofiles/view/update.ts)_
 
 ## `smartthings devices [ID]`
 
@@ -1845,7 +1880,7 @@ OPTIONS
                                            locale
 ```
 
-_See code: [src/commands/devices.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices.ts)_
+_See code: [src/commands/devices.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices.ts)_
 
 ## `smartthings devices:capability-status [ID] [COMPONENT] [CAPABILITY]`
 
@@ -1873,7 +1908,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/capability-status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/capability-status.ts)_
+_See code: [src/commands/devices/capability-status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/capability-status.ts)_
 
 ## `smartthings devices:commands [ID] [COMMAND]`
 
@@ -1898,7 +1933,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/commands.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/commands.ts)_
+_See code: [src/commands/devices/commands.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/commands.ts)_
 
 ## `smartthings devices:component-status [ID] [COMPONENT]`
 
@@ -1925,7 +1960,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/component-status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/component-status.ts)_
+_See code: [src/commands/devices/component-status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/component-status.ts)_
 
 ## `smartthings devices:delete [ID]`
 
@@ -1945,7 +1980,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/delete.ts)_
+_See code: [src/commands/devices/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/delete.ts)_
 
 ## `smartthings devices:health [ID]`
 
@@ -1971,7 +2006,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/health.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/health.ts)_
+_See code: [src/commands/devices/health.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/health.ts)_
 
 ## `smartthings devices:preferences [ID]`
 
@@ -1997,7 +2032,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/preferences.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/preferences.ts)_
+_See code: [src/commands/devices/preferences.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/preferences.ts)_
 
 ## `smartthings devices:presentation [ID]`
 
@@ -2023,7 +2058,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/presentation.ts)_
+_See code: [src/commands/devices/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/presentation.ts)_
 
 ## `smartthings devices:rename [ID] [LABEL]`
 
@@ -2050,7 +2085,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/rename.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/rename.ts)_
+_See code: [src/commands/devices/rename.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/rename.ts)_
 
 ## `smartthings devices:status [ID]`
 
@@ -2076,7 +2111,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/status.ts)_
+_See code: [src/commands/devices/status.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/status.ts)_
 
 ## `smartthings devices:update [ID]`
 
@@ -2104,7 +2139,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/devices/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/devices/update.ts)_
+_See code: [src/commands/devices/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/devices/update.ts)_
 
 ## `smartthings edge:channels [IDORINDEX]`
 
@@ -2141,7 +2176,7 @@ EXAMPLE
   $ smartthings edge:channels 2
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels.ts)_
 
 ## `smartthings edge:channels:assign [DRIVERID] [VERSION]`
 
@@ -2166,7 +2201,7 @@ ALIASES
   $ smartthings edge:drivers:publish
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/assign.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/assign.ts)_
 
 ## `smartthings edge:channels:create`
 
@@ -2191,7 +2226,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/create.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/create.ts)_
 
 ## `smartthings edge:channels:delete [ID]`
 
@@ -2211,7 +2246,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/delete.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/delete.ts)_
 
 ## `smartthings edge:channels:drivers [IDORINDEX]`
 
@@ -2240,7 +2275,7 @@ ALIASES
   $ smartthings edge:channels:assignments
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/drivers.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/drivers.ts)_
 
 ## `smartthings edge:channels:enroll [HUBID]`
 
@@ -2261,7 +2296,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/enroll.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/enroll.ts)_
 
 ## `smartthings edge:channels:enrollments [IDORINDEX]`
 
@@ -2287,7 +2322,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/enrollments.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/enrollments.ts)_
 
 ## `smartthings edge:channels:invites [IDORINDEX]`
 
@@ -2324,7 +2359,7 @@ EXAMPLES
   smartthings edge:channels:invites <invite id>      # list details about the invite with id <invite id>
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/invites.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/invites.ts)_
 
 ## `smartthings edge:channels:invites:accept ID`
 
@@ -2347,7 +2382,7 @@ ALIASES
   $ smartthings edge:channels:invitations:accept
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/invites/accept.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/invites/accept.ts)_
 
 ## `smartthings edge:channels:invites:create`
 
@@ -2358,6 +2393,7 @@ USAGE
   $ smartthings edge:channels:invites:create
 
 OPTIONS
+  -C, --channel=channel  channel id
   -d, --dry-run          produce JSON but don't actually submit
   -h, --help             show CLI help
   -i, --input=input      specify input file
@@ -2375,7 +2411,7 @@ ALIASES
   $ smartthings edge:channels:invitations:create
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/invites/create.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/invites/create.ts)_
 
 ## `smartthings edge:channels:invites:delete [ID]`
 
@@ -2401,7 +2437,7 @@ ALIASES
   $ smartthings edge:channels:invites:revoke
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/invites/delete.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/invites/delete.ts)_
 
 ## `smartthings edge:channels:unassign [DRIVERID]`
 
@@ -2425,7 +2461,7 @@ ALIASES
   $ smartthings edge:drivers:unpublish
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/unassign.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/unassign.ts)_
 
 ## `smartthings edge:channels:unenroll [HUBID]`
 
@@ -2446,7 +2482,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/unenroll.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/unenroll.ts)_
 
 ## `smartthings edge:channels:update [ID]`
 
@@ -2474,7 +2510,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/channels/update.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/channels/update.ts)_
 
 ## `smartthings edge:drivers [IDORINDEX]`
 
@@ -2500,7 +2536,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers.ts)_
 
 ## `smartthings edge:drivers:delete [ID]`
 
@@ -2520,7 +2556,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers/delete.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers/delete.ts)_
 
 ## `smartthings edge:drivers:install [DRIVERID]`
 
@@ -2549,7 +2585,7 @@ EXAMPLES
   enrolled hub
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers/install.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers/install.ts)_
 
 ## `smartthings edge:drivers:installed [IDORINDEX]`
 
@@ -2576,7 +2612,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers/installed.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers/installed.ts)_
 
 ## `smartthings edge:drivers:logcat [DRIVERID]`
 
@@ -2598,7 +2634,7 @@ OPTIONS
   --language=language        ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers/logcat.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers/logcat.ts)_
 
 ## `smartthings edge:drivers:package [PROJECTDIRECTORY]`
 
@@ -2668,7 +2704,7 @@ EXAMPLE
   $ smartthings edge:drivers:package -u driver.zip
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers/package.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers/package.ts)_
 
 ## `smartthings edge:drivers:uninstall [DRIVERID]`
 
@@ -2689,7 +2725,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.4.2/src/commands/edge/drivers/uninstall.ts)_
+_See code: [@smartthings/plugin-cli-edge](https://github.com/SmartThingsCommunity/edge-cli-plugin/blob/v1.5.0/src/commands/edge/drivers/uninstall.ts)_
 
 ## `smartthings generate:java`
 
@@ -2704,7 +2740,7 @@ OPTIONS
   -p, --profile=profile  [default: default] configuration profile
 ```
 
-_See code: [src/commands/generate/java.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/generate/java.ts)_
+_See code: [src/commands/generate/java.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/generate/java.ts)_
 
 ## `smartthings generate:node`
 
@@ -2719,7 +2755,7 @@ OPTIONS
   -p, --profile=profile  [default: default] configuration profile
 ```
 
-_See code: [src/commands/generate/node.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/generate/node.ts)_
+_See code: [src/commands/generate/node.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/generate/node.ts)_
 
 ## `smartthings help [COMMAND]`
 
@@ -2736,7 +2772,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 
 ## `smartthings installedapps [ID]`
 
@@ -2764,7 +2800,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/installedapps.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/installedapps.ts)_
+_See code: [src/commands/installedapps.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/installedapps.ts)_
 
 ## `smartthings installedapps:delete [ID]`
 
@@ -2786,7 +2822,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/installedapps/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/installedapps/delete.ts)_
+_See code: [src/commands/installedapps/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/installedapps/delete.ts)_
 
 ## `smartthings installedapps:rename [ID] [NAME]`
 
@@ -2815,7 +2851,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/installedapps/rename.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/installedapps/rename.ts)_
+_See code: [src/commands/installedapps/rename.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/installedapps/rename.ts)_
 
 ## `smartthings installedschema [ID]`
 
@@ -2843,7 +2879,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/installedschema.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/installedschema.ts)_
+_See code: [src/commands/installedschema.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/installedschema.ts)_
 
 ## `smartthings installedschema:delete [ID]`
 
@@ -2865,7 +2901,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/installedschema/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/installedschema/delete.ts)_
+_See code: [src/commands/installedschema/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/installedschema/delete.ts)_
 
 ## `smartthings locations [IDORINDEX]`
 
@@ -2891,7 +2927,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/locations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations.ts)_
+_See code: [src/commands/locations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations.ts)_
 
 ## `smartthings locations:create`
 
@@ -2916,7 +2952,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/locations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/create.ts)_
+_See code: [src/commands/locations/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/create.ts)_
 
 ## `smartthings locations:delete [ID]`
 
@@ -2940,7 +2976,7 @@ EXAMPLES
   $ smartthings locations:delete my-location-id  # delete the location with the specified id
 ```
 
-_See code: [src/commands/locations/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/delete.ts)_
+_See code: [src/commands/locations/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/delete.ts)_
 
 ## `smartthings locations:rooms [IDORINDEX]`
 
@@ -2970,7 +3006,7 @@ ALIASES
   $ smartthings rooms
 ```
 
-_See code: [src/commands/locations/rooms.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/rooms.ts)_
+_See code: [src/commands/locations/rooms.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/rooms.ts)_
 
 ## `smartthings locations:rooms:create`
 
@@ -2999,7 +3035,7 @@ ALIASES
   $ smartthings rooms:create
 ```
 
-_See code: [src/commands/locations/rooms/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/rooms/create.ts)_
+_See code: [src/commands/locations/rooms/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/rooms/create.ts)_
 
 ## `smartthings locations:rooms:delete [ID]`
 
@@ -3023,7 +3059,7 @@ ALIASES
   $ smartthings rooms:delete
 ```
 
-_See code: [src/commands/locations/rooms/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/rooms/delete.ts)_
+_See code: [src/commands/locations/rooms/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/rooms/delete.ts)_
 
 ## `smartthings locations:rooms:update [ID]`
 
@@ -3055,7 +3091,7 @@ ALIASES
   $ smartthings rooms:update
 ```
 
-_See code: [src/commands/locations/rooms/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/rooms/update.ts)_
+_See code: [src/commands/locations/rooms/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/rooms/update.ts)_
 
 ## `smartthings locations:update [ID]`
 
@@ -3083,7 +3119,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/locations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/locations/update.ts)_
+_See code: [src/commands/locations/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/locations/update.ts)_
 
 ## `smartthings logout`
 
@@ -3098,7 +3134,61 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/logout.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/logout.ts)_
+_See code: [src/commands/logout.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/logout.ts)_
+
+## `smartthings organizations [ID]`
+
+list all organizations the user belongs to. NOTE: Currently all users belong to
+a single, default organization. Information about how to create and join
+additional organizations will be forthcoming at a later time.
+
+```
+USAGE
+  $ smartthings organizations [ID]
+
+ARGUMENTS
+  ID  the organization name, id or index
+
+OPTIONS
+  -h, --help             show CLI help
+  -j, --json             use JSON format of input and/or output
+  -o, --output=output    specify output file
+  -p, --profile=profile  [default: default] configuration profile
+  -t, --token=token      the auth token to use
+  -y, --yaml             use YAML format of input and/or output
+  --compact              use compact table format with no lines between body rows
+  --expanded             use expanded table format with a line between each body row
+  --indent=indent        specify indentation for formatting JSON or YAML output
+  --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+```
+
+_See code: [src/commands/organizations.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/organizations.ts)_
+
+## `smartthings organizations:current`
+
+return the currently active organization. NOTE: Currently all users belong to
+a single, default organization. Information about how to create and join
+additional organizations will be forthcoming at a later time.
+
+```
+USAGE
+  $ smartthings organizations:current
+
+OPTIONS
+  -O, --organization=organization  The organization ID to use for this command
+  -h, --help                       show CLI help
+  -j, --json                       use JSON format of input and/or output
+  -o, --output=output              specify output file
+  -p, --profile=profile            [default: default] configuration profile
+  -t, --token=token                the auth token to use
+  -y, --yaml                       use YAML format of input and/or output
+  --compact                        use compact table format with no lines between body rows
+  --expanded                       use expanded table format with a line between each body row
+  --indent=indent                  specify indentation for formatting JSON or YAML output
+  --language=language              ISO language code or "NONE" to not specify a language. Defaults to the OS locale
+```
+
+_See code: [src/commands/organizations/current.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/organizations/current.ts)_
 
 ## `smartthings plugins`
 
@@ -3115,7 +3205,7 @@ EXAMPLE
   $ smartthings plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.0/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.1/src/commands/plugins/index.ts)_
 
 ## `smartthings plugins:inspect PLUGIN...`
 
@@ -3136,7 +3226,7 @@ EXAMPLE
   $ smartthings plugins:inspect myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.0/src/commands/plugins/inspect.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.1/src/commands/plugins/inspect.ts)_
 
 ## `smartthings plugins:install PLUGIN...`
 
@@ -3172,7 +3262,7 @@ EXAMPLES
   $ smartthings plugins:install someuser/someplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.0/src/commands/plugins/install.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.1/src/commands/plugins/install.ts)_
 
 ## `smartthings plugins:link PLUGIN`
 
@@ -3199,7 +3289,7 @@ EXAMPLE
   $ smartthings plugins:link myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.0/src/commands/plugins/link.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.1/src/commands/plugins/link.ts)_
 
 ## `smartthings plugins:uninstall PLUGIN...`
 
@@ -3221,7 +3311,7 @@ ALIASES
   $ smartthings plugins:remove
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.0/src/commands/plugins/uninstall.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.1/src/commands/plugins/uninstall.ts)_
 
 ## `smartthings plugins:update`
 
@@ -3236,7 +3326,7 @@ OPTIONS
   -v, --verbose
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.0/src/commands/plugins/update.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v1.10.1/src/commands/plugins/update.ts)_
 
 ## `smartthings presentation PRESENTATIONID [MANUFACTURERNAME]`
 
@@ -3274,7 +3364,7 @@ EXAMPLES
   flag then no language header is specified in the API request
 ```
 
-_See code: [src/commands/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/presentation.ts)_
+_See code: [src/commands/presentation.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/presentation.ts)_
 
 ## `smartthings presentation:device-config PRESENTATIONID [MANUFACTURERNAME]`
 
@@ -3301,7 +3391,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/presentation/device-config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/presentation/device-config.ts)_
+_See code: [src/commands/presentation/device-config.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/presentation/device-config.ts)_
 
 ## `smartthings presentation:device-config:create`
 
@@ -3326,7 +3416,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/presentation/device-config/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/presentation/device-config/create.ts)_
+_See code: [src/commands/presentation/device-config/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/presentation/device-config/create.ts)_
 
 ## `smartthings presentation:device-config:generate ID`
 
@@ -3356,7 +3446,7 @@ OPTIONS
                                  integrations
 ```
 
-_See code: [src/commands/presentation/device-config/generate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/presentation/device-config/generate.ts)_
+_See code: [src/commands/presentation/device-config/generate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/presentation/device-config/generate.ts)_
 
 ## `smartthings rules [IDORINDEX]`
 
@@ -3383,7 +3473,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/rules.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/rules.ts)_
+_See code: [src/commands/rules.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/rules.ts)_
 
 ## `smartthings rules:create`
 
@@ -3409,7 +3499,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/rules/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/rules/create.ts)_
+_See code: [src/commands/rules/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/rules/create.ts)_
 
 ## `smartthings rules:delete [ID]`
 
@@ -3430,7 +3520,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/rules/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/rules/delete.ts)_
+_See code: [src/commands/rules/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/rules/delete.ts)_
 
 ## `smartthings rules:update [ID]`
 
@@ -3459,7 +3549,7 @@ OPTIONS
   --language=language            ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/rules/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/rules/update.ts)_
+_See code: [src/commands/rules/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/rules/update.ts)_
 
 ## `smartthings schema [ID]`
 
@@ -3486,7 +3576,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/schema.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/schema.ts)_
+_See code: [src/commands/schema.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/schema.ts)_
 
 ## `smartthings schema:authorize ARN`
 
@@ -3517,7 +3607,7 @@ EXAMPLES
   It requires your machine to be configured to run the AWS CLI
 ```
 
-_See code: [src/commands/schema/authorize.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/schema/authorize.ts)_
+_See code: [src/commands/schema/authorize.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/schema/authorize.ts)_
 
 ## `smartthings schema:create`
 
@@ -3545,7 +3635,7 @@ OPTIONS
   --statement-id=statement-id  use this statement id instead of the default when authorizing lambda functions
 ```
 
-_See code: [src/commands/schema/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/schema/create.ts)_
+_See code: [src/commands/schema/create.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/schema/create.ts)_
 
 ## `smartthings schema:delete [ID]`
 
@@ -3565,7 +3655,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/schema/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/schema/delete.ts)_
+_See code: [src/commands/schema/delete.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/schema/delete.ts)_
 
 ## `smartthings schema:regenerate [ID]`
 
@@ -3591,7 +3681,7 @@ OPTIONS
   --language=language    ISO language code or "NONE" to not specify a language. Defaults to the OS locale
 ```
 
-_See code: [src/commands/schema/regenerate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/schema/regenerate.ts)_
+_See code: [src/commands/schema/regenerate.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/schema/regenerate.ts)_
 
 ## `smartthings schema:update [ID]`
 
@@ -3618,7 +3708,7 @@ OPTIONS
   --statement-id=statement-id  use this statement id instead of the default when authorizing lambda functions
 ```
 
-_See code: [src/commands/schema/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.31/packages/cli/src/commands/schema/update.ts)_
+_See code: [src/commands/schema/update.ts](https://github.com/SmartThingsCommunity/smartthings-cli/blob/v0.0.0-pre.32/packages/cli/src/commands/schema/update.ts)_
 <!-- commandsstop -->
 
 # Configuration and Logging
