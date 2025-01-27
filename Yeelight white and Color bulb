@@ -1,0 +1,137 @@
+-- Edge Driver for Yeelight Bulbs
+local capabilities = require "st.capabilities"
+local Driver = require "st.driver"
+local log = require "log"
+local socket = require "cosock.socket"
+
+-- Yeelight Commands
+local YEE_LIGHT_COMMANDS = {
+  ON = "set_power",
+  OFF = "set_power",
+  BRIGHTNESS = "set_bright",
+  COLOR = "set_rgb",
+  COLOR_TEMP = "set_ct_abx"
+}
+
+-- Helper function to send a Yeelight command
+local function send_yeelight_command(ip, port, method, params)
+  local command = {
+    id = 1,
+    method = method,
+    params = params
+  }
+  local json = require "dkjson"
+  local command_json = json.encode(command)
+
+  log.info(string.format("Sending command to Yeelight: %s", command_json))
+  local client = assert(socket.tcp())
+  client:settimeout(5)
+  assert(client:connect(ip, port))
+  client:send(command_json .. "\r\n")
+  client:close()
+end
+
+-- Turn On/Off Command Handler
+local function handle_switch(driver, device, command)
+  local ip = device:get_field("device_ip")
+  local port = device:get_field("device_port")
+  local state = command.command == "on" and "on" or "off"
+  send_yeelight_command(ip, port, YEE_LIGHT_COMMANDS.ON, {state})
+  device:emit_event(capabilities.switch.switch(state))
+end
+
+-- Set Brightness Command Handler
+local function handle_brightness(driver, device, command)
+  local ip = device:get_field("device_ip")
+  local port = device:get_field("device_port")
+  local level = command.args.level
+  send_yeelight_command(ip, port, YEE_LIGHT_COMMANDS.BRIGHTNESS, {level})
+  device:emit_event(capabilities.switchLevel.level(level))
+end
+
+-- Set Color Command Handler
+local function handle_color(driver, device, command)
+  local ip = device:get_field("device_ip")
+  local port = device:get_field("device_port")
+  local red = command.args.color.red
+  local green = command.args.color.green
+  local blue = command.args.color.blue
+  local rgb = red * 65536 + green * 256 + blue
+  send_yeelight_command(ip, port, YEE_LIGHT_COMMANDS.COLOR, {rgb})
+  device:emit_event(capabilities.colorControl.color({red = red, green = green, blue = blue}))
+end
+
+-- Device Initialization
+local function device_init(driver, device)
+  device:emit_event(capabilities.switch.switch.off())
+  device:emit_event(capabilities.switchLevel.level(50))
+end
+
+-- Device Discovery
+local function discovery_handler(driver, _, should_continue)
+  log.info("Starting discovery for Yeelight bulbs...")
+  local udp_socket = assert(socket.udp())
+  udp_socket:settimeout(5)
+  udp_socket:setoption("broadcast", true)
+
+  local msg = "M-SEARCH * HTTP/1.1\r\n" ..
+              "HOST: 239.255.255.250:1982\r\n" ..
+              "MAN: \"ssdp:discover\"\r\n" ..
+              "ST: wifi_bulb\r\n"
+  udp_socket:sendto(msg, "239.255.255.250", 1982)
+
+  while should_continue() do
+    local response, ip, port = udp_socket:receivefrom()
+    if response then
+      log.info(string.format("Discovered Yeelight at %s:%d", ip, port))
+      local bulb_metadata = parse_ssdp_response(response)
+      local device_profile = "yeelight-bulb" -- Make sure this matches your profile.yaml
+      local device_id = bulb_metadata.id or ip
+
+      driver:try_create_device({
+        type = "LAN",
+        device_network_id = device_id,
+        label = "Yeelight Bulb",
+        profile = device_profile,
+        manufacturer = "Yeelight",
+        model = bulb_metadata.model,
+        vendor_provided_label = "Yeelight"
+      })
+    end
+  end
+  udp_socket:close()
+end
+
+-- Parse SSDP Response
+local function parse_ssdp_response(response)
+  local metadata = {}
+  for line in response:gmatch("[^\r\n]+") do
+    local key, value = line:match("([^:]+):%s*(.+)")
+    if key and value then
+      metadata[key:lower()] = value
+    end
+  end
+  return metadata
+end
+
+-- Define the Driver
+local yeelight_driver = Driver("Yeelight LAN Driver", {
+  discovery = discovery_handler,
+  lifecycle_handlers = {
+    init = device_init
+  },
+  capability_handlers = {
+    [capabilities.switch.ID] = {
+      [capabilities.switch.commands.on.NAME] = handle_switch,
+      [capabilities.switch.commands.off.NAME] = handle_switch
+    },
+    [capabilities.switchLevel.ID] = {
+      [capabilities.switchLevel.commands.setLevel.NAME] = handle_brightness
+    },
+    [capabilities.colorControl.ID] = {
+      [capabilities.colorControl.commands.setColor.NAME] = handle_color
+    }
+  }
+})
+
+yeelight_driver:run()
